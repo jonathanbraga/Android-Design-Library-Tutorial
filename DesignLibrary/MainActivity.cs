@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace DesignLibrary
 {
-    [Activity(Label = "DesignLibrary", MainLauncher = true)]
+    [Activity(Label = "DesignLibrary", MainLauncher = true, Theme = "@style/Theme.DesignDemo")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

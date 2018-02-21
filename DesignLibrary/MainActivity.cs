@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using Java.Lang;
 using Android.Views;
 using Android.Content;
+using DesignLibrary.Fragments;
 
 namespace DesignLibrary
 {
@@ -68,9 +69,9 @@ namespace DesignLibrary
         private void SetUpViewPager(ViewPager viewPager)
         {
             TabAdpter adpter = new TabAdpter(SupportFragmentManager);
-            adpter.AddFragment(null,"");
-            adpter.AddFragment(null,"");
-            adpter.AddFragment(null,"");
+            adpter.AddFragment(new Fragment1(), "Fragment 1");
+            adpter.AddFragment(new Fragment2(), "Fragment 2");
+            adpter.AddFragment(new Fragment3(), "Fragment 3");
 
             viewPager.Adapter = adpter;
         }
@@ -90,8 +91,6 @@ namespace DesignLibrary
                 default:
                     return base.OnOptionsItemSelected(item);
             }
-
-            return base.OnOptionsItemSelected(item);
         }
 
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
